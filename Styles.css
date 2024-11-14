@@ -1,0 +1,113 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; /* Optional: reduces the video brightness for better text visibility */
+}
+
+/* Container for the page content */
+.container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #e0e0e0;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+}
+
+p {
+    color: #dcdcdc;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
