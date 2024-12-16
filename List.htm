@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+</head>
+<body>
+    <!-- Input and button for testing -->
+    <input type="text" id="myTextBox" placeholder="Enter a value">
+    <button id="checkButton">Redirect</button>
+    
+    <!-- JavaScript inline for simplicity -->
+    <script>
+        // Ensure the DOM is fully loaded before running the script
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkButton = document.getElementById('checkButton');
+
+            // Ensure the button exists in the DOM
+            if (checkButton) {
+                checkButton.addEventListener('click', function () {
+                    const input = document.getElementById('myTextBox').value.trim();
+
+                    // Check for specific strings and redirect accordingly
+                    switch (input) {
+                        case 'List':
+                            window.location.href = 'List.txt';
+                            break;
+                        case 'value2':
+                            window.location.href = 'page2.html';
+                            break;
+                        case 'value3':
+                            window.location.href = 'page3.html';
+                            break;
+                        case 'value4':
+                            window.location.href = 'page4.html';
+                            break;
+                        case 'value5':
+                            window.location.href = 'page5.html';
+                            break;
+                        default:
+                            alert('Invalid input! Please try again.');
+                            break;
+                    }
+                });
+            } else {
+                console.error("Button with ID 'checkButton' not found.");
+            }
+        });
+    </script>
+</body>
+</html>
